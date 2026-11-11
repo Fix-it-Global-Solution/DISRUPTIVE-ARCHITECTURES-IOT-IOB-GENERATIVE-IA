@@ -1,0 +1,54 @@
+[Fix-It] Chave Gemini configurada (Início: AQ.Ab8RN... | 53 caracteres).
+=== FIX-IT: PIPELINE DE IA E TRIAGEM MUNICIPAL ===
+[Fix-It] Inicializando modelo YOLOv8...
+
+==================================================
+>>> EXECUTANDO CENÁRIO 1: DETECÇÃO DE AVARIA URBANA (CAMINHO FELIZ)
+==================================================
+[Etapa 1] Resultado da Visão Computacional:
+{
+  "resolucao": "1920x1080",
+  "total_anomalias": 1,
+  "deteccoes": [
+    {
+      "classe": "buraco_asfalto",
+      "confianca": 0.8842,
+      "box": [
+        120.5,
+        340.0,
+        480.2,
+        590.8
+      ]
+    }
+  ]
+}
+
+[Etapa 2] Parecer Técnico da IA Generativa (Google Gemini):
+{
+  "status_triagem": "APROVADO",
+  "diagnostico_tecnico": "Afundamento severo do pavimento asfáltico (buraco profundo) localizado na faixa exclusiva de ônibus, com indícios de erosão subsuperficial agravada por precipitação pluviométrica intensa.",
+  "nivel_criticidade": "ALTA",
+  "risco_populacao": "Alto risco de acidentes graves para motociclistas, ciclistas e danos estruturais severos a ônibus e veículos de transporte coletivo, além de potenciais projeções de detritos para a calçada.",
+  "secretaria_responsavel": "Secretaria Municipal de Infraestrutura Urbana e Obras (SIURB)",
+  "prazo_estimado_resolucao_horas": 24,
+  "necessidade_interdicao": true,
+  "equipe_recomendada": "Equipe de Tapa-Buraco e Recapeamento Asfáltico com apoio de agente de trânsito para interdição parcial da faixa de ônibus"
+}
+
+==================================================
+>>> EXECUTANDO CENÁRIO 2: IMAGEM SEM ANOMALIA (CASO DE BORDA / FALHA)
+==================================================
+[Etapa 1] Resultado da Visão Computacional:
+{
+  "resolucao": "640x640",
+  "total_anomalias": 0,
+  "deteccoes": []
+}
+
+[Etapa 2] Parecer Técnico da IA Generativa (Google Gemini):
+{
+  "status_triagem": "REPROVADO_AUTOMATICO",
+  "motivo": "Nenhuma evidência de anomalia urbana detectada com confiança mínima.",
+  "acao": "Solicitar nova foto ao munícipe com melhor ângulo e iluminação.",
+  "criticidade": "NENHUMA"
+}
